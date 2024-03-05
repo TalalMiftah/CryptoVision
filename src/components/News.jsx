@@ -1,5 +1,5 @@
 import  {React,useState} from 'react'
-import { Typography, Row, Col,Card,Avatar,Input,Select } from 'antd'
+import { Typography, Row, Col, Card, Avatar, Input, Select } from 'antd'
 import { useEffect } from 'react'
 
 const News = ({ simplified }) => {
@@ -10,15 +10,22 @@ const News = ({ simplified }) => {
   const [lang, setlang] = useState('EN')
   const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
   const url = `https://min-api.cryptocompare.com/data/v2/news/?lang=${lang}&api_key={4b73109b800662283c6a16d23d897c1520f7f6a91ccb60a65f8136790f34f946}`
-      
-      async function fetchData(){
-        const response = await fetch(url);
-        const json = await response.json();
-        setcryptoNews(json);
+  useEffect(()=>{
+      const fetchData = async () => {
+        try {
+          const response = await fetch(url);
+          const json = await response.json();
+          setcryptoNews(json);
+        }
+        catch (error)
+        {
+          console.error('Error fetching data:', error);
+        }
       };
-      useEffect(fetchData,[url]);
-      useEffect(()=>{
-        const filteredData = cryptoNews?.Data?.filter((coin)=>coin.title?.toLowerCase().includes(searchTerm.toLowerCase()));
+    fetchData();
+  }, [url]);
+  useEffect(()=> {
+    const filteredData = cryptoNews?.Data?.filter((coin)=>coin.title?.toLowerCase().includes(searchTerm.toLowerCase()));
         setcryptoN(filteredData); 
       }, [cryptoNews, searchTerm]);
   if (!cryptoNews?.Data) return 'Loading...';

@@ -34,7 +34,6 @@ const CurrencyConverter = () => {
             exchangeRate: json[chosenSecondaryCurrency],
         })
     } useEffect(fetchData, []);
-    console.log(amount)
     return (
         <div className="currency-converter">
             <div className='input-box'>
@@ -59,7 +58,7 @@ const CurrencyConverter = () => {
                             className="currency-options"
                             onChange={(e) => setChosenPrimaryCurrency(e.target.value)}
                         >
-                            {currencies.map((currency) => (<option >{currency}</option>))}
+                            {currencies.map((currency) => (<option key={currency}>{currency}</option>))}
                         </select>
                     </Card>
                 </div>
@@ -83,7 +82,7 @@ const CurrencyConverter = () => {
                             className="currency-options"
                             onChange={(e) => setChosenSecondaryCurrency(e.target.value)}
                         >
-                            {currencies.map((currency) => (<option>{currency}</option>))}
+                            {currencies.map((currency) => (<option key={currency}>{currency}</option>))}
                         </select>
                     </Card>
                 </div>
@@ -94,7 +93,7 @@ const CurrencyConverter = () => {
                     <div className="excenter">
                         <h1>Exchange Rate</h1>
                         <h2>{millify(exchangedData.exchangeRate)}</h2>
-                        <p  >{exchangedData.primaryCurrency} to {exchangedData.secondaryCurrency}</p>
+                        <p>{exchangedData.primaryCurrency} to {exchangedData.secondaryCurrency}</p>
                     </div>
                 </Card>
             </div>

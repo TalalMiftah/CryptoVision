@@ -14,16 +14,16 @@ const Navbar = () => {
                 </Typography.Title>
             </div>
             <Menu theme="dark" style={{justifyContent:"center"}}>
-                <Menu.Item icon={<HomeOutlined />} style={{marginRight:"20px"}}>
+                <Menu.Item icon={<HomeOutlined />} key="home" style={{marginRight:"20px"}}>
                     <Link to="/">Home</Link>
                 </Menu.Item>
-                <Menu.Item icon={<FundOutlined />}style={{marginRight:"20px"}}>
+                <Menu.Item icon={<FundOutlined />} key="cryptocurrencies" style={{marginRight:"20px"}}>
                     <Link to="/cryptocurrencies">Cryptocurrencies</Link>
                 </Menu.Item>
-                <Menu.Item icon={<SwapOutlined />}style={{marginRight:"20px"}}>
+                <Menu.Item icon={<SwapOutlined />} key="currencyconverter" style={{marginRight:"20px"}}>
                     <Link to="/currencyconverter">Currency Converter</Link>
                 </Menu.Item>
-                <Menu.Item icon={<BulbOutlined />}style={{marginRight:"20px"}}>
+                <Menu.Item icon={<BulbOutlined />} key="news" style={{marginRight:"20px"}}>
                     <Link to="/news">News</Link>
                 </Menu.Item>
             </Menu> 
