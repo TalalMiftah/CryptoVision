@@ -1,4 +1,4 @@
-import CurrencyConverter from "./components/CurrencyConverter"
+import CurrencyConverter from "./components/cryptoConverter/CurrencyConverter"
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';

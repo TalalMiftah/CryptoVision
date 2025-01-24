@@ -1,0 +1,36 @@
+.currency-converter{
+    padding: 10px;
+    background-color: #fffa;
+    text-align: center;
+    border-radius: 10px;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    border: solid rgba(128, 128, 128, 0.156);
+    gap: 10px;
+}
+
+.input-box{
+    gap: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exchange-rate{
+    border-radius: 15px;
+    background-color: black;
+}
+
+.exchange-rate h2   {
+    color: #278EA5;
+    font-size: 50px;
+}
+
+.input-box > div {
+
+}

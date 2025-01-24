@@ -2,16 +2,12 @@ import React from 'react'
 import {Menu, Typography, Avatar } from 'antd'
 import { Link } from 'react-router-dom'
 import { HomeOutlined, SwapOutlined , BulbOutlined, FundOutlined} from '@ant-design/icons'
-import icon from '../images/logo.png'
+import icon from '../images/logo.svg'
 const Navbar = () => {  
     return (
         <div className='nav-container' >
             <div className='logo-container'>
-                <Avatar src={icon} size='large' /><br/>
-                <Typography.Title level={2} className='logo' style={{color: '#ffffff'}
-                    }>
-                    CryptoNews
-                </Typography.Title>
+                <Avatar src={icon} style={{width: "fit-content", borderRadius: "0px"}} />
             </div>
             <Menu theme="dark" style={{justifyContent:"center"}}>
                 <Menu.Item icon={<HomeOutlined />} key="home" style={{marginRight:"20px"}}>
