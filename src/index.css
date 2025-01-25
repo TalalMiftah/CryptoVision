@@ -1,6 +1,13 @@
 * {
   margin: 0 !important;
   box-sizing: border-box;
+  -webkit-user-drag: none;
+  line-height: 1;
+  font-family: "Kanit", serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @font-face {
@@ -50,7 +57,7 @@ a:hover{
 .app{
   display: flex;
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   background: url("./images/bg.png");
   backdrop-filter: blur(10px);
   background-repeat: no-repeat;
@@ -66,13 +73,11 @@ a:hover{
   height: 100%;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
 }
 
 .routes{
-  all: unset !important;
-  padding: 20px;
-  flex: 1;
+  /* padding: 20px; */
+  flex: 1 1;
 }
 
 /*navbar*/
@@ -99,42 +104,6 @@ a:hover{
   left: 30px;
 }
 
-@media screen and (max-width:800px){
-  .app{
-      flex-direction: column;
-      overflow: hidden;
-  }
-
-  .main{
-      flex: 1;
-      margin-top: 90px;
-      margin-left: 0px;
-      margin-right: 10px;
-  }
-
-
-  .nav-container{
-    height: 8vh;
-    position:fixed;
-    width: 100%;
-    z-index: 100;
-    background-color: var(--bgSecondary);
-}
-
-  .menu-control-container{
-      display: block !important;
-  }
-
-
-  .home-title{
-      font-size: 1.4rem !important;
-  }
-
-  .show-more{
-      font-size: 1.3rem !important;
-  }
-
-}
 /*news*/
 .news-card{
   min-height: 300px !important;
@@ -179,9 +148,11 @@ width: 70%;
 }
 .crypto-card-container{
   min-height: 65vh !important;
+  padding: 40px 0;
 }
 .crypto-card{
   min-width: 250px;
+  width: 900px;
 }
 .crypto-card .crypto-image{
   width:35px;
@@ -226,4 +197,16 @@ width: 70%;
 
 .home-home, .show-more {
   color: #B9BCCD !important;
+}
+
+.ant-card-head {
+  border-bottom: none !important; /* Removes the border */
+  color: #B9BCCD !important;
+}
+
+.ant-card-body {
+  padding-top: 0px !important;
+  p {
+    width: 100%;
+  }
 }
