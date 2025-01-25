@@ -3,6 +3,7 @@ import { Layout, Card, Row, Col, Input, Statistic } from "antd";
 import {
   ArrowUpOutlined,
   ArrowDownOutlined,
+  ArrowRightOutlined,
   LoadingOutlined,
 } from "@ant-design/icons";
 
@@ -20,7 +21,7 @@ const Cryptocurrencies = ({ simplified }) => {
     setcryptosList(json);
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 1500);
   }
 
   useEffect(fetchData, []);
@@ -33,27 +34,22 @@ const Cryptocurrencies = ({ simplified }) => {
   }, [cryptosList, searchTerm]);
 
   return (
-    <>
+    <div className="cryptocurrencies-container">
       {!simplified && (
         <div className="search-crypto">
           <Input
             placeholder="Search Cryptocurrencie"
+            style={{ width: 300, marginRight: "10px", backgroundColor: "#202526", border:"1px solid #ffffff29"}}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
       )}
-      <Row gutter={[64, 64]} className="crypto-card-container">
+      <Row gutter={[6, 6]} className="crypto-card-container">
         {cryptos?.map((currency, index) => (
-          <Col key={index} xs={24} sm={12} lg={8} className="crypto-card">
-            <a
-              href={`https://www.cryptocompare.com${currency?.CoinInfo?.Url}/USD`}
-              target="_blank"
-              rel="noreferrer"
-            >
+          <Col key={index}  xs={24} sm={12} lg={6} style={{ padding:"40px",  width: "200px", display: "flex", alignItems:"center", justifyContent:"center", aspectRatio: "1 / 1", }} className="crypto-card">
               <Card
                 loading={loading}
                 bordered={false}
-                gap="middle"
                 title={`${currency?.CoinInfo?.FullName}`}
                 extra={
                   <>
@@ -65,11 +61,11 @@ const Cryptocurrencies = ({ simplified }) => {
                 }
                 hoverable
                 style={{
-                  width: "clamp(19.375rem, 5.848vw + 18.132rem, 21.875rem)",
                   borderRadius: "10px",
                   backgroundColor: "#202526",
                   color: "#B9BCCD",
-                  aspectRatio: "1 / 1",
+                  height:"100%",
+                  width:"100%"
                 }}
               >
                 <div
@@ -77,7 +73,7 @@ const Cryptocurrencies = ({ simplified }) => {
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "space-between",
+                    gap:"20px"
                   }}
                 >
                   <Statistic
@@ -97,13 +93,13 @@ const Cryptocurrencies = ({ simplified }) => {
                     }
                     suffix="%"
                   />
-                  <p>
+                   <p>
                     <b>Symbol </b> {currency?.CoinInfo?.Name}{" "}
                   </p>
                   <p>
                     <b>Price </b> {currency?.DISPLAY?.USD?.PRICE}{" "}
                   </p>
-                  <p>
+                  {/*<p>
                     <b>Marcket cap</b> {currency?.DISPLAY?.USD?.MKTCAP}{" "}
                   </p>
                   <p>
@@ -111,14 +107,19 @@ const Cryptocurrencies = ({ simplified }) => {
                   </p>
                   <p>
                     <b>Launch Date</b> {currency?.CoinInfo?.AssetLaunchDate}{" "}
-                  </p>
+                  </p> */}
+                  <div className="provider-container">
+                  {/* <a href={news.url} target="_blank" rel="noreferrer"> */}
+                    <ArrowRightOutlined />
+                  {/* </a> */}
+                  </div>
                 </div>
               </Card>
-            </a>
+            {/* </a> */}
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   );
 };
 

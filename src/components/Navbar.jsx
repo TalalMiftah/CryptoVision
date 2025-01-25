@@ -36,16 +36,16 @@ const Navbar = () => {
           <Link to="/cryptocurrencies">Cryptocurrencies</Link>
         </Menu.Item>
         <Menu.Item
-          key="currencyconverter"
-          style={{ marginRight: "20px" }}
-        >
-          <Link to="/currencyconverter">Currency Converter</Link>
-        </Menu.Item>
-        <Menu.Item
           key="news"
           style={{ marginRight: "20px" }}
         >
           <Link to="/news">News</Link>
+        </Menu.Item>
+        <Menu.Item
+          key="currencyconverter"
+          style={{ marginRight: "20px" }}
+        >
+          <Link to="/currencyconverter">Currency Converter</Link>
         </Menu.Item>
       </Menu>
     </div>

@@ -4,6 +4,8 @@
   -webkit-user-drag: none;
   line-height: 1;
   font-family: "Kanit", serif;
+  --antd-wave-shadow-color: #B9BCCD !important;
+  /* border: solid 1px grey; */
 }
 
 ::-webkit-scrollbar {
@@ -51,7 +53,7 @@ h4{
 
 /*app.js*/
 a:hover{
-  color: bisque!important;
+  color: #B9BCCD!important;
 }
 
 .app{
@@ -61,11 +63,9 @@ a:hover{
   background: url("./images/bg.png");
   backdrop-filter: blur(10px);
   background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.navbar{
-  height: 100px;
+  background-size: 100% 100%;
+  background-position: top;
+  background-attachment: fixed;
 }
 
 .main{
@@ -81,6 +81,11 @@ a:hover{
 }
 
 /*navbar*/
+
+.navbar{
+  height: 100px;
+}
+
 .ant-menu {
   background-color: var(--bgPrimary) !important;
   display: flex;
@@ -105,27 +110,44 @@ a:hover{
 }
 
 /*news*/
-.news-card{
-  min-height: 300px !important;
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 30px 0;
 }
+
 .news-image-container{
   display: flex !important;
   justify-content: space-between !important;
 }
 .news-title{
 width: 70%;
+color: rgb(185, 188, 205) !important;
 }
 
 .news-image-container .img{
   width:100px;
   height:100px;
 }
+
+.news-card {
+  background-color: #202526 !important;
+}
+
 .news-card p{
-  color: black;
-  margin: 10px 0px !important;
+  color: rgb(185, 188, 205);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  padding: 10px;
 }
 .provider-container{
   float: right;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
 }
 .provider-name{
   margin-left: 10px;
@@ -134,6 +156,7 @@ width: 70%;
 .home-heading-container{
   display: flex;
   padding: 30px;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
@@ -141,19 +164,32 @@ width: 70%;
 .show-more{
   margin-top: 0px !important;
 }
-/*cryptocurrencies*/
-.search-crypto{
-  margin: 20px auto 30px auto;
-  width: 250px;
+/*************************/
+/*    cryptocurrencies   */
+/*************************/
+
+.cryptocurrencies-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
+.search-crypto{
+  width: 350px;
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  padding-bottom: 50px;
+  
+}
+
 .crypto-card-container{
   min-height: 65vh !important;
   padding: 40px 0;
+  width: 60%;
+  max-width: 1200px;
 }
-.crypto-card{
-  min-width: 250px;
-  width: 900px;
-}
+
 .crypto-card .crypto-image{
   width:35px;
 }
@@ -168,12 +204,7 @@ width: 70%;
 
 .ant-card-body {
   /* border: solid; */
-  height: 250px;
-}
-
-.ant-card-body > div {
-  /* border: solid; */
-  height: 200px;
+  flex: 1 1;
 }
 
 .ant-skeleton-content .ant-skeleton-paragraph {
@@ -188,11 +219,11 @@ width: 70%;
 
 .ant-menu.ant-menu-dark .ant-menu-item-selected  {
   background-color: transparent !important;  /* Light gray background on hover/focus */
-  color: #32EBB7 !important;
+  color: #B9BCCD !important;
 }
 
 .ant-menu.ant-menu-dark .ant-menu-item-selected > span > a {
-  color: #a6ffe6 !important;
+  color: #ffffff29 !important;
 }
 
 .home-home, .show-more {
@@ -206,7 +237,25 @@ width: 70%;
 
 .ant-card-body {
   padding-top: 0px !important;
+  height: 75%;
   p {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
+}
+
+.ant-select-selector {
+  background-color: #20252694 !important;
+  color: #B9BCCD !important;
+  fill: #B9BCCD !important;;
+  border:1px solid #ffffff29 !important;
+}
+
+.ant-input {
+  color: #B9BCCD !important;
+}
+
+.news-card:hover {
+  transform: matrix3d(1, 5);
 }
