@@ -88,19 +88,6 @@ const Cryptocurrencies = ({ simplified }) => {
                     Total Volume : {currency?.DISPLAY?.USD?.VOLUME24HOURTO}{" "}
                   </p>
                   <p>Launch Date : {currency?.CoinInfo?.AssetLaunchDate} </p>
-                  {/* <p>Description :</p>
-                  <Card style={{ marginTop: "10px" }}>
-                    {currency?.CoinInfo?.FullName} or {currency?.CoinInfo?.Name}{" "}
-                    this currency was created in{" "}
-                    {currency?.CoinInfo?.AssetLaunchDate}, with max supply of{" "}
-                    {currency?.CoinInfo?.MaxSupply} coin and if you don't know
-                    the max supply is the maximum amount of coins that will ever
-                    exist in the lifetime of the cryptocurrency. The miners get{" "}
-                    {currency?.CoinInfo?.BlockReward}{" "}
-                    {currency?.DISPLAY?.USD.FROMSYMBOL} if they successfully
-                    mine a block of the {currency?.CoinInfo?.FullName} today we
-                    have {currency?.DISPLAY?.USD.SUPPLY} .
-                  </Card> */}
                 </div>
               </Card>
             </a>

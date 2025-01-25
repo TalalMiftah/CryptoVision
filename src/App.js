@@ -9,12 +9,12 @@ const App = () => {
   return (
 
     <div className="app" >
-      <Layout >
+      <Layout style={{background: "none"}}>
       <div className="navbar">
         <Navbar/>
       </div>
       <div className="main" >
-          <div className="routes" style={{backgroundColor:"#F9F7F7"}}>
+          <div className="routes">
             <Routes >
             <Route exact path="/" element={<Homepage/>}/>
             <Route exact path="/currencyconverter" element={<CurrencyConverter/>}/>

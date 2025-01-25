@@ -1,6 +1,6 @@
 * {
   margin: 0 !important;
-  /* line-height: 1; */
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -15,6 +15,7 @@ h4{
 .covertb{
   align-items: center;
 }
+
 .currency-options{
   width: 200px;
   text-align: center;
@@ -22,12 +23,14 @@ h4{
   height: 30px;
   border-radius: 5px;
 }
+
 .currency-options:hover{
   box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
 }
+
 :root{
   --text-primary:#000;
-  --bgPrimary:#222222;
+  --bgPrimary:#202526;
   --bgSecondary: #222222;
   --light-blue: #e6f7ff;
   --border: #d9d9d9;
@@ -38,14 +41,20 @@ h4{
   padding: 0;
   box-sizing: border-box;
 }
+
 /*app.js*/
 a:hover{
   color: bisque!important;
 }
+
 .app{
   display: flex;
   overflow: hidden;
   height: 100vh;
+  background: url("./images/bg.png");
+  backdrop-filter: blur(10px);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navbar{
@@ -61,10 +70,7 @@ a:hover{
 }
 
 .routes{
-  background-color: unset;
-  background: url("./images/bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  all: unset !important;
   padding: 20px;
   flex: 1;
 }
@@ -79,11 +85,18 @@ a:hover{
 .nav-container{
   left: 0;
   margin: 0px;
-  background-color: var(--bgPrimary);
   width: 100%;
   display:flex;
   align-items: center;
   padding: 20px;
+  position: relative;
+  justify-content: center;
+}
+
+.logo-container {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
 @media screen and (max-width:800px){
@@ -92,16 +105,13 @@ a:hover{
       overflow: hidden;
   }
 
-  /* .navbar{
-      flex: 1;
-  } */
-
   .main{
       flex: 1;
       margin-top: 90px;
       margin-left: 0px;
       margin-right: 10px;
   }
+
 
   .nav-container{
     height: 8vh;
@@ -115,12 +125,15 @@ a:hover{
       display: block !important;
   }
 
+
   .home-title{
       font-size: 1.4rem !important;
   }
+
   .show-more{
       font-size: 1.3rem !important;
   }
+
 }
 /*news*/
 .news-card{
@@ -151,6 +164,7 @@ width: 70%;
 /*homepage*/
 .home-heading-container{
   display: flex;
+  padding: 30px;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
@@ -199,4 +213,17 @@ width: 70%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected  {
+  background-color: transparent !important;  /* Light gray background on hover/focus */
+  color: #32EBB7 !important;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected > span > a {
+  color: #a6ffe6 !important;
+}
+
+.home-home, .show-more {
+  color: #B9BCCD !important;
 }
