@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0 !important;
   box-sizing: border-box;
@@ -5,7 +9,6 @@
   line-height: 1;
   font-family: "Kanit", serif;
   --antd-wave-shadow-color: #B9BCCD !important;
-  /* border: solid 1px grey; */
 }
 
 ::-webkit-scrollbar {
@@ -13,12 +16,12 @@
 }
 
 @font-face {
-  src: url(fonts/High-Speed.otf);
-  font-family: myFirstFont;
+  src: url("fonts/High-Speed.otf");
+  /* font-family: myFirstFont; */
 }
 
 h4{
-  font-family: myFirstFont;
+  /* font-family: myFirstFont; */
 }
 
 .covertb{
@@ -39,7 +42,7 @@ h4{
 
 :root{
   --text-primary:#000;
-  --bgPrimary:#202526;
+  --bgPrimary:#0e1716cc;
   --bgSecondary: #222222;
   --light-blue: #e6f7ff;
   --border: #d9d9d9;
@@ -60,10 +63,10 @@ a:hover{
   display: flex;
   overflow: hidden;
   min-height: 100vh;
-  background: url("./images/bg.png");
+  background: url("./images/bg.svg");
   backdrop-filter: blur(10px);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: top;
   background-attachment: fixed;
 }
@@ -78,6 +81,10 @@ a:hover{
 .routes{
   /* padding: 20px; */
   flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 /*navbar*/
@@ -89,7 +96,7 @@ a:hover{
 .ant-menu {
   background-color: var(--bgPrimary) !important;
   display: flex;
-  width: 65%;
+  /* width: 65%; */
 }
 
 .nav-container{
@@ -103,20 +110,7 @@ a:hover{
   justify-content: center;
 }
 
-.logo-container {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
 /*news*/
-
-.news-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 0 30px 0;
-}
 
 .news-image-container{
   display: flex !important;
@@ -132,17 +126,7 @@ color: rgb(185, 188, 205) !important;
   height:100px;
 }
 
-.news-card {
-  background-color: #202526 !important;
-}
 
-.news-card p{
-  color: rgb(185, 188, 205);
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 300;
-  padding: 10px;
-}
 .provider-container{
   float: right;
   position: absolute;
@@ -186,20 +170,11 @@ color: rgb(185, 188, 205) !important;
 .crypto-card-container{
   min-height: 65vh !important;
   padding: 40px 0;
-  width: 60%;
   max-width: 1200px;
 }
 
 .crypto-card .crypto-image{
   width:35px;
-}
-/*footer*/
-.footer {
-  background-color: var(--bgPrimary);
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  align-items: center;
 }
 
 .ant-card-body {
@@ -238,17 +213,18 @@ color: rgb(185, 188, 205) !important;
 .ant-card-body {
   padding-top: 0px !important;
   height: 75%;
-  p {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
+}
+
+.ant-card-body p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .ant-select-selector {
   background-color: #20252694 !important;
   color: #B9BCCD !important;
-  fill: #B9BCCD !important;;
+  fill: #B9BCCD !important;
   border:1px solid #ffffff29 !important;
 }
 
@@ -256,6 +232,14 @@ color: rgb(185, 188, 205) !important;
   color: #B9BCCD !important;
 }
 
-.news-card:hover {
-  transform: matrix3d(1, 5);
+@media (max-width: 640px) {
+  .crypto-card-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .crypto-card-container {
+    max-width: 650px;
+  }
 }

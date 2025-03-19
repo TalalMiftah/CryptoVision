@@ -4,7 +4,6 @@ import {
   ArrowUpOutlined,
   ArrowDownOutlined,
   ArrowRightOutlined,
-  LoadingOutlined,
 } from "@ant-design/icons";
 
 const Cryptocurrencies = ({ simplified }) => {
@@ -13,9 +12,10 @@ const Cryptocurrencies = ({ simplified }) => {
   const [cryptos, setCryptos] = useState(cryptosList?.Data);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
+  const APIKey = process.env.API_KEY
   async function fetchData() {
     const response = await fetch(
-      `https://min-api.cryptocompare.com/data/top/totalvolfull?limit=${count}&tsym=USD&api_key={4b73109b800662283c6a16d23d897c1520f7f6a91ccb60a65f8136790f34f946}`
+      `https://min-api.cryptocompare.com/data/top/totalvolfull?limit=${count}&tsym=USD&api_key={${APIKey}}`
     );
     const json = await response.json();
     setcryptosList(json);
@@ -24,7 +24,9 @@ const Cryptocurrencies = ({ simplified }) => {
     }, 1500);
   }
 
-  useEffect(fetchData, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const filteredData = cryptosList?.Data.filter((coin) =>
@@ -39,14 +41,14 @@ const Cryptocurrencies = ({ simplified }) => {
         <div className="search-crypto">
           <Input
             placeholder="Search Cryptocurrencie"
-            style={{ width: 300, marginRight: "10px", backgroundColor: "#202526", border:"1px solid #ffffff29"}}
+            style={{ width: "100%", marginRight: "10px", backgroundColor: "#202526", border:"1px solid #ffffff29"}}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
       )}
       <Row gutter={[6, 6]} className="crypto-card-container">
         {cryptos?.map((currency, index) => (
-          <Col key={index}  xs={24} sm={12} lg={6} style={{ padding:"40px",  width: "200px", display: "flex", alignItems:"center", justifyContent:"center", aspectRatio: "1 / 1", }} className="crypto-card">
+          <Col key={index}  xs={24} sm={12} lg={8} xl={6} style={{ padding:"20px",  width: "200px", display: "flex", alignItems:"center", justifyContent:"center", aspectRatio: "1 / 1", }} className="crypto-card">
               <Card
                 loading={loading}
                 bordered={false}
@@ -61,11 +63,12 @@ const Cryptocurrencies = ({ simplified }) => {
                 }
                 hoverable
                 style={{
-                  borderRadius: "10px",
-                  backgroundColor: "#202526",
+                  borderRadius: "15px",
+                  backgroundColor: "#202526cc",
                   color: "#B9BCCD",
                   height:"100%",
-                  width:"100%"
+                  width:"100%",
+                  backdropFilter:"blur(1px)",
                 }}
               >
                 <div

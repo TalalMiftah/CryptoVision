@@ -34,7 +34,10 @@ const CurrencyConverter = () => {
             secondaryCurrency: chosenSecondaryCurrency,
             exchangeRate: json[chosenSecondaryCurrency],
         })
-    } useEffect(fetchData, []);
+    }
+    useEffect(() => {
+        fetchData();
+    }, []);
     return (
         <div className="currency-converter">
             <div className='input-box'>

@@ -4,23 +4,26 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
-    "@reduxjs/toolkit": "^1.7.2",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
+    "@tabler/icons-react": "^3.29.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
     "antd": "^4.24.16",
-    "axios": "^0.25.0",
+    "axios": "^1.8.1",
     "chart.js": "^3.7.0",
+    "clsx": "^2.1.1",
     "eslint-config-react-app": "^7.0.0",
+    "framer-motion": "^12.4.7",
     "html-react-parser": "^1.4.8",
     "millify": "^4.0.0",
     "moment": "^2.29.1",
-    "react": "^17.0.2",
+    "react": "^18.2.0",
     "react-chartjs-2": "^4.0.1",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.1",
+    "recharts": "^2.15.1",
+    "tailwind-merge": "^3.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,5 +49,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.0"
   }
 }

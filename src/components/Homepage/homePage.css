@@ -1,0 +1,132 @@
+.home-container {
+    width: 90%;
+    height: 100vh;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    color: #ffffff;
+    /* border: solid 1px; */
+}
+
+.home-container > * {
+    /* border: solid; */
+}
+
+.home-title-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+}
+
+.home-title {
+    color: #C7C7C7;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: clamp(2.813rem, 1.582vw + 2.476rem, 4.375rem);
+    line-height: 1.4;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Top5 {
+    all: unset;
+    padding: 30px 20px;
+    font-weight: 200;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #373B3C;
+    width: fit-content;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.Arrow {
+    height: 15px;
+    transform: rotate(-90deg);
+}
+
+.top5-container {
+    height: 100vh;
+    width: 100%;
+    /* border: solid red 1px; */
+}
+
+.text{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.text > * {
+    /* border: solid; */
+}
+
+.button-container {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+}
+
+.button-container > button {
+    all: unset;
+    font-size: 14px;
+    font-weight: 300;
+    height: 25px;
+    padding: 0 10px;
+    border-radius: 8px;
+    color: #ffffff80;
+    display: flex;
+    align-items: center;
+}
+
+.homePage-charts-container {
+    grid-template-areas: 
+                         ". a a a a a a a . . . . . ."
+                         ". a a a a a a a b b b b b b"
+                         ". a a a a a a a b b b b b b"
+                         ". a a a a a a a b b b b b b"
+                         ". a a a a a a a b b b b b b"
+                         ". a a a a a a a b b b b b b"
+                         "c c c c c c c button b b b b b b"
+                         "c c c c c c c d d d d d d ."
+                         "c c c c c c c d d d d d d ."
+                         "c c c c c c c d d d d d d ."
+                         "c c c c c c c d d d d d d ."
+                         "c c c c c c c d d d d d d ."
+                         ". . . . . . . d d d d d d .";    
+}
+
+.homePage-charts-a {
+    grid-area: a;
+}
+
+.homePage-charts-b {
+    grid-area: b;
+}
+
+.homePage-charts-c {
+    grid-area: c;
+}
+
+.homePage-charts-d {
+    grid-area: d;
+}
+
+.homePage-charts-button {
+    all: unset;
+    width: 80px;
+    background-color: #373B3C;
+    aspect-ratio: 1 / 1;
+    padding: 20px;
+    grid-area: button;
+    fill: white;
+    display: flex;
+    border-radius: 50%;
+}
