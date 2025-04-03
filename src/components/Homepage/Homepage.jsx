@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./homePage.css";
-import ChartAnimation from "./chartAnimation";
+import ChartAnimation from "../chartAnimation";
 import homeImg1 from "./../../images/homeImg1.png";
 import FlipWords from "../../ui/flip-words";
 import { useNavigate } from "react-router-dom";
@@ -27,7 +27,7 @@ const Homepage = () => {
       <section className="home-container">
         <div className="home-title-container">
           <div className="home-title">
-            <div>
+            <div className="home-title-header" >
               Welcome to CryptoVerse <br />
               Here you Can Find <br />
               the latest <FlipWords words={words} />
@@ -64,10 +64,10 @@ const Homepage = () => {
             <motion.div
               className="homePage-charts-container"
               style={{
-                width: "850px",
+                width: "38vw",
                 aspectRatio: "16 / 14",
                 position: "absolute",
-                right: "6%",
+                right: "0",
                 display: "grid",
                 gridTemplateColumns: "repeat(14, 1fr)",
                 gridTemplateRows: "repeat(14, 1fr)",
@@ -106,7 +106,7 @@ const Homepage = () => {
             onClick={() =>  navigate("/cryptocurrencies")}
             className="Top5"
           >
-            Top Currencies{" "}
+            Currencies
             <motion.svg
               className="Arrow"
               xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ const Homepage = () => {
             onClick={() =>  navigate("/news")}
             className="Top5"
           >
-            Last news{" "}
+            News
             <motion.svg
               className="Arrow"
               xmlns="http://www.w3.org/2000/svg"

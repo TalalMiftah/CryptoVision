@@ -8,6 +8,7 @@ import News from "./components/News/News"
 import Cryptocurrencies from "./components/Cryptocurrencies"
 import './index.css';
 const App = () => {
+  
   return (
     <div className="app" >
       <Layout style={{ background: "none" }}>

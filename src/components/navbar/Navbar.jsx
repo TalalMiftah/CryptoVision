@@ -1,9 +1,10 @@
 import React from "react";
-import { Menu, Avatar } from "antd";
+import { Menu, Avatar, Input } from "antd";
 import { useNavigate } from "react-router-dom";
 import icon from "../../images/logo.svg";
-import { UserOutlined, VideoCameraOutlined, UploadOutlined } from "@ant-design/icons";
-import "./navbar.css"
+import { useLocation } from "react-router-dom";
+import { SearchOutlined } from "@ant-design/icons";
+import "./navbar.css";
 
 const Navbar = () => {
   const menuItems = [
@@ -13,21 +14,29 @@ const Navbar = () => {
     { label: "Currency Converter", key: "/currencyconverter" },
   ];
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div className="nav-container">
-      <Avatar
-        src={icon}
-        className="logo-container"
-      />
-      <Menu
-        onClick={(e) => navigate(e.key)}
-        items={menuItems}
-        theme="dark"
-        className="nav-menu"
-      />
+      <Avatar src={icon} className="logo-container" onClick={() => navigate('/')}/>
+      <div className="nav-menu-container">
+        <Menu
+          onClick={(e) => {
+            navigate(e.key);
+          }}
+          items={menuItems}
+          theme="dark"
+          className="nav-menu"
+          defaultSelectedKeys={['/']}
+          selectedKeys={[location?.pathname]}
+        />
+      </div>
+      <div className="search-container">
+        <input className="search" type="text" placeholder="Search" />
+        <SearchOutlined style={{ position:"absolute", margin:"auto", top:"0", bottom:"0", right:"30px", fill: "" }} />
+      </div>
     </div>
-  )
+  );
 };
 
 export default Navbar;
