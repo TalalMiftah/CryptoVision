@@ -4,27 +4,16 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
-    "@tabler/icons-react": "^3.29.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
-    "@testing-library/user-event": "^14.6.1",
     "antd": "^4.24.16",
-    "axios": "^1.8.1",
-    "chart.js": "^3.7.0",
-    "clsx": "^2.1.1",
     "eslint-config-react-app": "^7.0.0",
     "framer-motion": "^12.4.7",
-    "html-react-parser": "^1.4.8",
     "millify": "^4.0.0",
-    "moment": "^2.29.1",
     "react": "^18.2.0",
-    "react-chartjs-2": "^4.0.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.1",
     "recharts": "^2.15.1",
-    "tailwind-merge": "^3.0.1",
-    "web-vitals": "^2.1.4"
+    "tailwind-merge": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

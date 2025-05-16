@@ -31,6 +31,14 @@
     font-size: 50px;
 }
 
-.input-box > div {
-
+.currency-options{
+    width: 200px;
+    text-align: center;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  
+  .currency-options:hover{
+    box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
 }

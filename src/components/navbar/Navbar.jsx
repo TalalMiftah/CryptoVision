@@ -1,10 +1,10 @@
 import React from "react";
-import { Menu, Avatar, Input } from "antd";
+import { Menu, Avatar } from "antd";
 import { useNavigate } from "react-router-dom";
-import icon from "../../images/logo.svg";
+import Logo from "../../images/logo.svg";
 import { useLocation } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
-import "./navbar.css";
+import "./Navbar.css";
 
 const Navbar = () => {
   const menuItems = [
@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div className="nav-container">
-      <Avatar src={icon} className="logo-container" onClick={() => navigate('/')}/>
+      <Avatar src={Logo} className="logo-container" onClick={() => navigate('/')}/>
       <div className="nav-menu-container">
         <Menu
           onClick={(e) => {

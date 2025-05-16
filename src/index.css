@@ -9,36 +9,10 @@
   line-height: 1;
   font-family: "Kanit", serif;
   --antd-wave-shadow-color: #B9BCCD !important;
-  /* border: solid; */
 }
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-@font-face {
-  src: url("fonts/High-Speed.otf");
-  /* font-family: myFirstFont; */
-}
-
-h4{
-  /* font-family: myFirstFont; */
-}
-
-.covertb{
-  align-items: center;
-}
-
-.currency-options{
-  width: 200px;
-  text-align: center;
-  margin-top: 10px;
-  height: 30px;
-  border-radius: 5px;
-}
-
-.currency-options:hover{
-  box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
 }
 
 :root{
@@ -72,136 +46,19 @@ a:hover{
   background-attachment: fixed;
 }
 
-.main{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
 .routes{
-  /* padding: 20px; */
   flex: 1 1;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 
-/*navbar*/
-
-.navbar{
-  height: 100px;
-}
-
-.ant-menu {
-  display: flex;
-  /* width: 65%; */
-}
-
-/*news*/
-
-.news-image-container{
-  display: flex !important;
-  justify-content: space-between !important;
-}
-.news-title{
-width: 70%;
-color: rgb(185, 188, 205) !important;
-}
-
-.news-image-container .img{
-  width:100px;
-  height:100px;
-}
-
-
-.provider-container{
-  float: right;
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
-}
-.provider-name{
-  margin-left: 10px;
-}
-/*homepage*/
-.home-heading-container{
-  display: flex;
-  padding: 30px;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
-}
-.show-more{
-  margin-top: 0px !important;
-}
-/*************************/
-/*    cryptocurrencies   */
-/*************************/
-
-.cryptocurrencies-container{
-  padding: 20px 50px;
-  margin: 20px 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  border-radius: 15px;
-  background-image: linear-gradient(to right, transparent, #00000097, transparent);
-}
-
-.cryptocurrencies-header{
-  font-size: 36px;
-  width: 90%;
-  color: #C7C7C7;
-}
-
-.cryptocurrencies {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  max-width: 1440px;
-}
-
-.crypto-card {
-  position: static !important;
-}
-
-.crypto-card-container{
-  min-height: 65vh !important;
-  height: 80% !important;
-  overflow: scroll !important;
-}
-
-.custom-card-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #C7C7C7;
-  font-size: 24px;
-  font-weight: 700;
-}
+/**************************/
+/*  antd Rules Overriding  */
+/**************************/
 
 .ant-card-extra {
   width: 100%;
-}
-
-.crypto-card .crypto-image{
-  width: 28px;
-  border: solid 0.5px rgba(151, 202, 185, 0.5);
-  border-radius: 50%;
-  padding: 2px;
-  transform: rotate(10deg);
-}
-
-.crypto-card-price {
-  font-weight: 200;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .ant-skeleton-content .ant-skeleton-paragraph {
@@ -249,9 +106,4 @@ color: rgb(185, 188, 205) !important;
   .crypto-card-container {
     max-width: 650px;
   }
-}
-
-.chart-parent {
-  /* width: 500px; */
-  /* aspect-ratio: 16 / 9; */
 }

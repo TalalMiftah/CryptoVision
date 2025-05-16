@@ -108,19 +108,19 @@
                          ". . . . . . . d d d d d d .";
 }
 
-.homePage-charts-a {
+.homePage-charts-0 {
     grid-area: a;
 }
 
-.homePage-charts-b {
+.homePage-charts-1 {
     grid-area: b;
 }
 
-.homePage-charts-c {
+.homePage-charts-2 {
     grid-area: c;
 }
 
-.homePage-charts-d {
+.homePage-charts-3 {
     grid-area: d;
 }
 

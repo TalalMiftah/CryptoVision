@@ -1,0 +1,60 @@
+.cryptocurrencies-container{
+	padding: 20px 50px;
+	margin: 20px 0px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	border-radius: 15px;
+	background-image: linear-gradient(to right, transparent, #00000097, transparent);
+}
+
+.cryptocurrencies-header{
+	font-size: 36px;
+	width: 90%;
+	color: #C7C7C7;
+}
+
+.cryptocurrencies {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	max-width: 1440px;
+}
+
+.crypto-card {
+	position: static !important;
+}
+
+.crypto-card-container{
+	min-height: 65vh !important;
+	height: 80% !important;
+}
+
+.custom-card-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #C7C7C7;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.crypto-card .crypto-image{
+	width: 28px;
+	border: solid 0.5px rgba(151, 202, 185, 0.5);
+	border-radius: 50%;
+	padding: 2px;
+	transform: rotate(10deg);
+}
+
+.crypto-card-price {
+	font-weight: 200;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.covertb{
+	align-items: center;
+}
