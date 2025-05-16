@@ -63,9 +63,3 @@
         border-bottom: #B9BCCD 1px solid;
     }
 }
-
-@media (max-width: 1024px) {
-    .nav-menu {
-      /* display: none !important; */
-    }
-  }
