@@ -61,7 +61,6 @@ const CryptoCurrencies = () => {
                 lg={8}
                 xl={6}
                 xxl={4}
-                span={4}
                 style={{
                   height: "fit-content",
                   display: "flex",
